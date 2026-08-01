@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidraçaria 1001 Vidros | Especialistas em Vidros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            900: '#134e4a',
+                            DEFAULT: '#0f766e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Smooth fade in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        
+        /* Bar animation */
+        .bottom-bar {
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .bottom-bar.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-900 font-sans antialiased selection:bg-brand-900 selection:text-white">
+
+    <!-- Nav -->
+    <nav class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-zinc-200/50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <span class="font-display font-bold text-xl tracking-tight text-zinc-900">1001 Vidros.</span>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-zinc-600">
+                <a href="#sobre" class="hover:text-zinc-900 transition-colors">Sobre nós</a>
+                <a href="#servicos" class="hover:text-zinc-900 transition-colors">Serviços</a>
+                <a href="#contato" class="hover:text-zinc-900 transition-colors">Localização</a>
+            </div>
+            <a href="https://wa.me/5519991625676" class="px-5 py-2.5 bg-zinc-900 text-white text-sm font-medium rounded-full hover:bg-zinc-800 transition-colors">
+                Solicitar Orçamento
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-40 pb-24 px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="z-10 animate-fade opacity-0">
+                <h1 class="font-display text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 leading-[1.1] mb-6">
+                    Transparência e precisão em cada corte.
+                </h1>
+                <p class="text-lg text-zinc-600 mb-10 max-w-[45ch] leading-relaxed">
+                    Especialistas em projetos de vidro sob medida para residências e empresas em Campinas. Acabamento impecável e instalação segura.
+                </p>
+                <a href="https://wa.me/5519991625676" class="inline-flex items-center justify-center px-8 py-4 bg-brand text-white font-medium rounded-full hover:bg-brand-900 transition-transform active:scale-95">
+                    Falar com um Especialista
+                </a>
+            </div>
+            <div class="relative h-[600px] rounded-3xl overflow-hidden animate-fade delay-200 opacity-0 bg-zinc-200">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1600" alt="Instalação de vidros" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 border border-black/10 rounded-3xl mix-blend-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight mb-6">Nossa essência.</h2>
+                <p class="text-zinc-600 text-lg leading-relaxed mb-6">
+                    A Vidraçaria 1001 Vidros nasceu do compromisso com a qualidade absoluta. Entendemos que o vidro não é apenas um material de fechamento, mas um elemento central do design e da segurança do seu ambiente.
+                </p>
+                <p class="text-zinc-600 text-lg leading-relaxed">
+                    Localizados no Jd Conceição, atendemos toda a região de Campinas com pontualidade e rigor técnico.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-zinc-50 p-8 rounded-2xl flex flex-col justify-center">
+                    <span class="font-display text-4xl font-bold text-brand mb-2">10+</span>
+                    <span class="text-sm text-zinc-500 font-medium uppercase tracking-wider">Anos de Mercado</span>
+                </div>
+                <div class="bg-zinc-50 p-8 rounded-2xl flex flex-col justify-center">
+                    <span class="font-display text-4xl font-bold text-brand mb-2">100%</span>
+                    <span class="text-sm text-zinc-500 font-medium uppercase tracking-wider">Garantia Técnica</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-24 px-6 bg-zinc-950 text-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-display text-4xl font-bold tracking-tight mb-16 max-w-2xl">Soluções completas em envidraçamento para o seu projeto.</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Servico 1 -->
+                <div class="group border border-zinc-800 p-8 rounded-3xl hover:bg-zinc-900 transition-colors">
+                    <div class="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display">Fechamento de Sacadas</h3>
+                    <p class="text-zinc-400 leading-relaxed">Sistemas modernos com roldanas de alta durabilidade, garantindo proteção contra chuva e redução de ruído.</p>
+                </div>
+                <!-- Servico 2 -->
+                <div class="group border border-zinc-800 p-8 rounded-3xl hover:bg-zinc-900 transition-colors">
+                    <div class="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display">Box para Banheiro</h3>
+                    <p class="text-zinc-400 leading-relaxed">Temperados de 8mm nas opções incolor, fumê e verde. Ferragens em alumínio com acabamento premium.</p>
+                </div>
+                <!-- Servico 3 -->
+                <div class="group border border-zinc-800 p-8 rounded-3xl hover:bg-zinc-900 transition-colors">
+                    <div class="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display">Espelhos e Tampos</h3>
+                    <p class="text-zinc-400 leading-relaxed">Espelhos lapidados e bisotados que ampliam ambientes. Tampos de mesa sob medida com recorte perfeito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social -->
+    <section class="py-24 px-6 bg-zinc-50 border-b border-zinc-200">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-display text-3xl font-bold mb-12">Confiança instalada.</h2>
+            <div class="text-2xl md:text-3xl font-medium text-zinc-800 leading-tight">
+                "Excelente serviço. O acabamento do box ficou perfeito e o prazo foi respeitado à risca. Indico para toda a região."
+            </div>
+            <div class="mt-8 font-medium text-zinc-500">— [Depoimento a definir com o cliente]</div>
+        </div>
+    </section>
+
+    <!-- Localização & Footer -->
+    <footer id="contato" class="bg-white pt-24 pb-12 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 mb-24">
+            <div>
+                <h2 class="font-display text-4xl font-bold mb-6">Venha nos conhecer.</h2>
+                <p class="text-zinc-600 mb-8">Atendimento com hora marcada para entender as necessidades do seu projeto.</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-zinc-100 rounded-full flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <span class="block font-medium text-zinc-900">Endereço</span>
+                            <span class="text-zinc-500">Jd Conceição, Campinas - SP, 13091-020, Brazil</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-zinc-100 rounded-full flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div>
+                            <span class="block font-medium text-zinc-900">Telefone</span>
+                            <span class="text-zinc-500">(19) 99162-5676</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[400px] bg-zinc-200 rounded-3xl overflow-hidden relative">
+                <!-- Placeholder for map -->
+                <div class="absolute inset-0 flex items-center justify-center text-zinc-400 font-medium bg-zinc-100">
+                    [Mapa Interativo do Local]
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-zinc-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
+            <div>&copy; 2024 Vidraçaria 1001 Vidros. Todos os direitos reservados.</div>
+            <div>Prévia conceitual produzida por Lucas Murbach de Oiveira, numero: 19971318109. Não é um site oficial deste estabelecimento.</div>
+        </div>
+    </footer>
+
+    <!-- Barra Fixa Exigida no SKILL.md -->
+    <div id="sticky-contact" class="bottom-bar fixed bottom-0 left-0 w-full pt-16 pb-8 px-6 bg-gradient-to-t from-zinc-900/95 via-zinc-900/80 to-transparent z-50 pointer-events-none">
+        <div class="max-w-3xl mx-auto bg-zinc-900 border border-zinc-700/50 rounded-2xl p-6 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-4 pointer-events-auto">
+            <p class="text-zinc-200 font-medium">Para mais informações entre em contato: <br>Lucas Murbach de Oliveira</p>
+            <a href="https://wa.me/5519971318109" class="shrink-0 px-6 py-3 bg-white text-zinc-900 font-bold rounded-xl hover:bg-zinc-100 transition-colors">
+                Falar no WhatsApp: (19) 97131-8109
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Lógica para aparecer a barra no scroll
+        const stickyContact = document.getElementById('sticky-contact');
+        
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            
+            // Aparece nos últimos 500px da tela
+            if (documentHeight - scrollPosition < 500) {
+                stickyContact.classList.add('show');
+            } else {
+                stickyContact.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
